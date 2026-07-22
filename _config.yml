@@ -4,7 +4,7 @@
 title: "방경환"
 role: "Software Developer"                    # 사이드바 이름 밑
 hero_eyebrow: "SOFTWARE DEVELOPER"  # 홈 맨 위 작은 글씨
-hero_title_1: "방경환의 노트"        # 홈 큰 제목 (한 줄)
+hero_title_1: "Kyunghwan Bang"        # 홈 큰 제목 (한 줄)
 hero_title_2: ""                     # 안 씀 — 한 줄 제목이면 비워둬
 hero_intro: "백엔드를 주로 하고, 이것저것 공부합니다."
 description: "만든 것들과 공부 기록을 모아둔 포트폴리오입니다."
@@ -27,9 +27,9 @@ education:
 # 홈 '경력 · 활동' 카드
 experience:
   - period: "2025"
-    text: "ASK 학부생 논문경진대회 금상 (팀)"
+    text: "ASK 학부생 논문경진대회 금상"
   - period: "2021"
-    text: "교내 창의적 공학 설계 동상 (팀)"
+    text: "창의적 공학 설계 전시회 동상"
   - period: "2025.12 - 2026.01"
     text: "AI 클라우드 크랙 수강 및 수료"
   - period: "2022.04 - 2022.07"
