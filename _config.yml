@@ -1,13 +1,13 @@
 # ────────────────────────────────────────────────────────────────
 #  프로필 — 여기만 고치면 전체 반영
 # ────────────────────────────────────────────────────────────────
-title: "kyunghwan"
+title: "방경환"
 role: "Software Developer"                    # 사이드바 이름 밑
 hero_eyebrow: "SOFTWARE DEVELOPER"  # 홈 맨 위 작은 글씨
 hero_title_1: "Kyunghwan Bang"        # 홈 큰 제목 (한 줄)
 hero_title_2: ""                     # 안 씀 — 한 줄 제목이면 비워둬
 hero_intro: "백엔드를 주로 하고, 이것저것 공부합니다."
-description: "home"
+description: "만든 것들과 공부 기록을 모아둔 포트폴리오입니다."
 
 email: "qkdrudghks0297@naver.com"
 github_username: "bangkyunghwan"
