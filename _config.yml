@@ -1,33 +1,42 @@
 # ────────────────────────────────────────────────────────────────
 #  프로필 — 여기만 고치면 전체 반영
 # ────────────────────────────────────────────────────────────────
-title: "홍길동"
-role: "Backend Developer"                    # 사이드바 이름 밑
-hero_eyebrow: "BACKEND DEVELOPER · 신입 지망"  # 홈 맨 위 작은 글씨
-hero_title_1: "만들고 싶은 건"                 # 홈 큰 제목 (1줄)
-hero_title_2: "다 만들어봅니다"                # 홈 큰 제목 (2줄)
-hero_intro: "안정적인 서버와 깔끔한 API를 고민하는 백엔드 지망 개발자입니다. 하지만 프론트부터 모바일까지, 분야를 가리지 않고 만들어보며 폭을 넓혀왔어요."
+title: "방경환"
+role: "Software Developer"                    # 사이드바 이름 밑
+hero_eyebrow: "SOFTWARE DEVELOPER"  # 홈 맨 위 작은 글씨
+hero_title_1: "일단"                 # 홈 큰 제목 (1줄)
+hero_title_2: "공부합니다."                # 홈 큰 제목 (2줄)
+hero_intro: "백엔드를 주로 하고, 이것저것 공부합니다."
 description: "만든 것들과 공부 기록을 모아둔 포트폴리오입니다."
 
-email: "you@example.com"
-github_username: "your-github-id"
-linkedin_username: "your-linkedin-id"
-avatar: ""                 # 프로필 이미지 경로(예: /assets/avatar.png). 비우면 깃허브 사진 사용
+email: "qkdrudghks0297@naver.com"
+github_username: "bangkyunghwan"
+linkedin_username: ""
+avatar: "/asset/images/jake.png"                 # 프로필 이미지 경로(예: /assets/avatar.png). 비우면 깃허브 사진 사용
 
 # 홈 스킬 태그
-skills: [Java, Spring Boot, MySQL, Redis, React, Docker, AWS, Git]
+skills: [Java, Spring Boot, Docker, AWS, Git]
 
 # 홈 '학력' 카드
 education:
-  - period: "2021 – 2025"
-    text: "OO대학교 컴퓨터공학과 학사"
+  - period: "2021 – 현재"
+    text: "숭실대학교 소프트웨어학부"
+  - period: "자격증"
+    text: "SQLD · 정보처리기사"
 
 # 홈 '경력 · 활동' 카드
 experience:
-  - period: "2024"
-    text: "OO 스타트업 백엔드 인턴 — REST API·DB 설계 참여"
-  - period: "2023 – 2024"
-    text: "교내 개발 동아리 XX — 팀 프로젝트 다수 진행"
+  - period: "2025"
+    text: "ASK 학부생 논문경진대회 금상 (팀)"
+  - period: "2021"
+    text: "교내 창의적 공학 설계 동상 (팀)"
+  - period: "2025.12 - 2026.01"
+    text: "AI 클라우드 크랙 수강 및 수료"
+  - period: "2022.04 - 2022.07"
+    text: "빡공팟 4기 웹 해킹 트랙 수료"
+  - period: "2021.12 - 2022.02"
+    text: "게임 개발 아이디어톤 참여"
+
 
 # ── 아래는 그대로 ────────────────────────────
 baseurl: ""

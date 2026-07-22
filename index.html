@@ -12,13 +12,13 @@ layout: default
 
   <div class="info-grid">
     <div class="info-card">
-      <p class="info-label">학력</p>
+      <p class="info-label">학력 · 자격증</p>
       {% for e in site.education %}
       <div class="info-item"><div class="info-period">{{ e.period }}</div><div class="info-text">{{ e.text }}</div></div>
       {% endfor %}
     </div>
     <div class="info-card">
-      <p class="info-label">경력 · 활동</p>
+      <p class="info-label">수상 · 활동</p>
       {% for x in site.experience %}
       <div class="info-item"><div class="info-period">{{ x.period }}</div><div class="info-text">{{ x.text }}</div></div>
       {% endfor %}

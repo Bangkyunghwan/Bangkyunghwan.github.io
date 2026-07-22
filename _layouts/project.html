@@ -9,16 +9,14 @@ layout: default
 <div class="detail-actions">
   {% if page.repo and page.repo != "" %}<a class="btn btn-dark" href="{{ page.repo }}" rel="noopener">↗ GitHub</a>{% endif %}
   {% if page.demo and page.demo != "" %}<a class="btn" href="{{ page.demo }}" rel="noopener">↗ Live Demo</a>{% endif %}
+  {% if page.poster_pdf and page.poster_pdf != "" %}<a class="btn" href="{{ page.poster_pdf | relative_url }}" rel="noopener">↗ 발표 포스터 (PDF)</a>{% endif %}
 </div>
 
+{% if page.screenshots and page.screenshots != empty %}
 <div class="shots">
-  {% if page.screenshots %}
-    {% for s in page.screenshots %}<div class="thumb"><img src="{{ s | relative_url }}" alt=""></div>{% endfor %}
-  {% else %}
-    <div class="thumb">[ 스크린샷 1 ]</div>
-    <div class="thumb">[ 스크린샷 2 ]</div>
-  {% endif %}
+  {% for s in page.screenshots %}<div class="thumb"><img src="{{ s | relative_url }}" alt=""></div>{% endfor %}
 </div>
+{% endif %}
 
 {% if page.overview %}
 <div class="d-block"><p class="d-label">개요</p><p>{{ page.overview }}</p></div>
@@ -35,4 +33,8 @@ layout: default
 <div class="result-box"><p class="d-label">결과</p><p>{{ page.result }}</p></div>
 {% endif %}
 
+{% if content != "" %}
+<div class="post-body" style="border-top:1px solid var(--line); margin-top:36px; padding-top:30px;">
 {{ content }}
+</div>
+{% endif %}
