@@ -1,7 +1,7 @@
 ---
 name: Pixel Portfolio
 type: personal
-featured: false
+featured: true
 order: 4
 year: 2024
 tagline: "픽셀아트 컨셉의 개인 포트폴리오 사이트."

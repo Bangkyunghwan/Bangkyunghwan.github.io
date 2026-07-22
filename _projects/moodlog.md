@@ -1,7 +1,7 @@
 ---
 name: 무드로그
 type: team
-featured: false
+featured: true
 order: 3
 year: 2024
 tagline: "하루의 감정을 기록하고 통계로 돌아보는 앱."
