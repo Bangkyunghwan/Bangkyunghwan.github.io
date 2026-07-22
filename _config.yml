@@ -1,13 +1,13 @@
 # ────────────────────────────────────────────────────────────────
 #  프로필 — 여기만 고치면 전체 반영
 # ────────────────────────────────────────────────────────────────
-title: "방경환"
+title: "kyunghwan"
 role: "Software Developer"                    # 사이드바 이름 밑
 hero_eyebrow: "SOFTWARE DEVELOPER"  # 홈 맨 위 작은 글씨
 hero_title_1: "Kyunghwan Bang"        # 홈 큰 제목 (한 줄)
 hero_title_2: ""                     # 안 씀 — 한 줄 제목이면 비워둬
 hero_intro: "백엔드를 주로 하고, 이것저것 공부합니다."
-description: "만든 것들과 공부 기록을 모아둔 포트폴리오입니다."
+description: "home"
 
 email: "qkdrudghks0297@naver.com"
 github_username: "bangkyunghwan"
@@ -21,9 +21,10 @@ skills: [Java, Spring Boot, Docker, AWS, Git]
 education:
   - period: "2021 – 현재"
     text: "숭실대학교 소프트웨어학부"
-  - period: "자격증"
-    text: "SQLD · 정보처리기사"
-
+  - period: "2026"
+    text: "SQLD(SQL-Developer)"
+  - period: "2026"
+    text: "정보처리기사"
 # 홈 '경력 · 활동' 카드
 experience:
   - period: "2025"
@@ -34,8 +35,6 @@ experience:
     text: "AI 클라우드 크랙 수강 및 수료"
   - period: "2022.04 - 2022.07"
     text: "빡공팟 4기 웹 해킹 트랙 수료"
-  - period: "2021.12 - 2022.02"
-    text: "게임 개발 아이디어톤 참여"
 
 
 # ── 아래는 그대로 ────────────────────────────
