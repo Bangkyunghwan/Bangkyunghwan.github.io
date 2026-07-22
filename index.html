@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <p class="eyebrow">{{ site.hero_eyebrow }}</p>
+  <h1 class="hero-title">{{ site.hero_title_1 }}<br>{{ site.hero_title_2 }}</h1>
+  <p class="hero-intro">{{ site.hero_intro }}</p>
+  <ul class="chips">
+    {% for s in site.skills %}<li>{{ s }}</li>{% endfor %}
+  </ul>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <p class="info-label">학력</p>
+      {% for e in site.education %}
+      <div class="info-item"><div class="info-period">{{ e.period }}</div><div class="info-text">{{ e.text }}</div></div>
+      {% endfor %}
+    </div>
+    <div class="info-card">
+      <p class="info-label">경력 · 활동</p>
+      {% for x in site.experience %}
+      <div class="info-item"><div class="info-period">{{ x.period }}</div><div class="info-text">{{ x.text }}</div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<div class="section-head">
+  <h2>대표 프로젝트</h2>
+  <a class="more" href="{{ '/projects/' | relative_url }}">전체 보기 →</a>
+</div>
+<div class="card-grid">
+  {% assign featured = site.projects | where: "featured", true | sort: "order" %}
+  {% for p in featured %}
+  <a class="pcard" href="{{ p.url | relative_url }}">
+    <div class="thumb">{% if p.thumbnail %}<img src="{{ p.thumbnail | relative_url }}" alt="">{% else %}[ 썸네일 ]{% endif %}</div>
+    <div class="pcard-body">
+      <div class="pcard-top"><span class="pcard-name">{{ p.name }}</span><span class="pcard-year">{{ p.year }}</span></div>
+      <p class="pcard-tagline">{{ p.tagline }}</p>
+      <p class="pcard-tech">{{ p.tech | join: " · " }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+{% if site.posts.size > 0 %}
+<div class="section-head">
+  <h2>최근 글</h2>
+  <a class="more" href="{{ '/blog/' | relative_url }}">블로그 →</a>
+</div>
+<ul class="post-list" style="margin-top:0;">
+  {% for post in site.posts limit:3 %}
+  <li class="post-row" style="padding:20px 0;">
+    <div class="post-row-head">
+      {% if post.category %}<span class="cat">{{ post.category }}</span>{% endif %}
+      <a class="post-row-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="post-date">{{ post.date | date: "%Y.%m" }}</span>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

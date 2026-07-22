@@ -1,0 +1,35 @@
+---
+layout: default
+title: 프로젝트
+permalink: /projects/
+---
+
+<p class="eyebrow">PORTFOLIO</p>
+<h1 class="page-title">프로젝트</h1>
+<p class="page-sub">분야를 가리지 않고 만들어 온 작업들이에요. 카드를 클릭하면 자세히 볼 수 있어요.</p>
+
+<div class="filter-bar">
+  <button class="filter-btn is-on" data-filter="all">전체</button>
+  <button class="filter-btn" data-filter="team">팀 프로젝트</button>
+  <button class="filter-btn" data-filter="personal">개인</button>
+</div>
+
+<div class="card-grid" id="projectList">
+  {% assign items = site.projects | sort: "order" %}
+  {% for p in items %}
+  <a class="pcard" href="{{ p.url | relative_url }}" data-type="{{ p.type }}">
+    <div class="thumb">{% if p.thumbnail %}<img src="{{ p.thumbnail | relative_url }}" alt="">{% else %}[ 썸네일 ]{% endif %}</div>
+    <div class="pcard-body">
+      <div class="pcard-top">
+        <span class="pcard-name">{{ p.name }}</span>
+        <span class="pcard-type">{% if p.type == 'team' %}팀 프로젝트{% else %}개인{% endif %}</span>
+      </div>
+      <p class="pcard-tagline">{{ p.tagline }}</p>
+      <p class="pcard-tech">{{ p.tech | join: " · " }} · {{ p.year }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+<p class="empty" id="emptyMsg" style="display:none;">해당하는 프로젝트가 없어요.</p>
+
+<script src="{{ '/assets/js/filter.js' | relative_url }}"></script>

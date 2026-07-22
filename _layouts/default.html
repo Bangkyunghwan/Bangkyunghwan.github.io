@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  {% assign u = page.url %}
+
+  <button class="menu-toggle" aria-label="메뉴" onclick="document.body.classList.toggle('nav-open')">☰</button>
+  <div class="nav-overlay" onclick="document.body.classList.remove('nav-open')"></div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar" aria-hidden="true">
+          {% if site.avatar != "" %}<img src="{{ site.avatar | relative_url }}" alt="">
+          {% elsif site.github_username != "" %}<img src="https://github.com/{{ site.github_username }}.png" alt="" onerror="this.style.display='none'">{% endif %}
+        </div>
+        <p class="p-name">{{ site.title }}</p>
+        <p class="p-role mono">{{ site.role }}</p>
+      </div>
+
+      <nav class="side-nav" aria-label="주요 메뉴">
+        <a href="{{ '/' | relative_url }}" class="{% if u == '/' %}is-active{% endif %}">홈</a>
+        <a href="{{ '/projects/' | relative_url }}" class="{% if u contains '/projects' %}is-active{% endif %}">프로젝트</a>
+        <a href="{{ '/blog/' | relative_url }}" class="{% if u contains '/blog' %}is-active{% endif %}">블로그</a>
+      </nav>
+
+      <div class="side-social">
+        {% if site.github_username != "" %}<a href="https://github.com/{{ site.github_username }}" rel="noopener">↗ GitHub</a>{% endif %}
+        {% if site.linkedin_username != "" %}<a href="https://linkedin.com/in/{{ site.linkedin_username }}" rel="noopener">↗ LinkedIn</a>{% endif %}
+        {% if site.email != "" %}<a href="mailto:{{ site.email }}">↗ Email</a>{% endif %}
+      </div>
+    </aside>
+
+    <div class="content-area">
+      <main id="main">{{ content }}</main>
+    </div>
+  </div>
+</body>
+</html>

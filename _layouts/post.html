@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article>
+  <a class="back-link" href="{{ '/blog/' | relative_url }}">← 블로그</a>
+  <header class="post-head">
+    <p class="post-meta">
+      {% if page.category %}<span class="cat">{{ page.category }}</span>{% endif %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+      {% if page.tags.size > 0 %}· {% for tag in page.tags %}#{{ tag }} {% endfor %}{% endif %}
+    </p>
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+  <div class="post-body">{{ content }}</div>
+</article>
