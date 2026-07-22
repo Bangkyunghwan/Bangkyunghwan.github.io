@@ -4,8 +4,8 @@
 title: "방경환"
 role: "Software Developer"                    # 사이드바 이름 밑
 hero_eyebrow: "SOFTWARE DEVELOPER"  # 홈 맨 위 작은 글씨
-hero_title_1: "일단"                 # 홈 큰 제목 (1줄)
-hero_title_2: "공부합니다."                # 홈 큰 제목 (2줄)
+hero_title_1: "방경환의 노트"        # 홈 큰 제목 (한 줄)
+hero_title_2: ""                     # 안 씀 — 한 줄 제목이면 비워둬
 hero_intro: "백엔드를 주로 하고, 이것저것 공부합니다."
 description: "만든 것들과 공부 기록을 모아둔 포트폴리오입니다."
 

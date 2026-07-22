@@ -4,24 +4,28 @@ layout: default
 
 <section class="hero">
   <p class="eyebrow">{{ site.hero_eyebrow }}</p>
-  <h1 class="hero-title">{{ site.hero_title_1 }}<br>{{ site.hero_title_2 }}</h1>
+  <h1 class="hero-title">{{ site.hero_title_1 }}</h1>
   <p class="hero-intro">{{ site.hero_intro }}</p>
   <ul class="chips">
     {% for s in site.skills %}<li>{{ s }}</li>{% endfor %}
   </ul>
 
-  <div class="info-grid">
-    <div class="info-card">
-      <p class="info-label">학력 · 자격증</p>
-      {% for e in site.education %}
-      <div class="info-item"><div class="info-period">{{ e.period }}</div><div class="info-text">{{ e.text }}</div></div>
-      {% endfor %}
+  <div class="facts">
+    <div class="fact-group">
+      <p class="fact-title">학력 · 자격증</p>
+      <ul class="fact-list">
+        {% for e in site.education %}
+        <li><span class="fact-period">{{ e.period }}</span><span class="fact-text">{{ e.text }}</span></li>
+        {% endfor %}
+      </ul>
     </div>
-    <div class="info-card">
-      <p class="info-label">수상 · 활동</p>
-      {% for x in site.experience %}
-      <div class="info-item"><div class="info-period">{{ x.period }}</div><div class="info-text">{{ x.text }}</div></div>
-      {% endfor %}
+    <div class="fact-group">
+      <p class="fact-title">수상 · 활동</p>
+      <ul class="fact-list">
+        {% for x in site.experience %}
+        <li><span class="fact-period">{{ x.period }}</span><span class="fact-text">{{ x.text }}</span></li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </section>
@@ -30,19 +34,21 @@ layout: default
   <h2>프로젝트</h2>
   <a class="more" href="{{ '/projects/' | relative_url }}">전체 보기 →</a>
 </div>
-<div class="card-grid">
-  {% assign featured = site.projects | where: "featured", true | sort: "order" %}
+{% assign featured = site.projects | where: "featured", true | sort: "order" %}
+<ul class="p-rows">
   {% for p in featured %}
-  <a class="pcard" href="{{ p.url | relative_url }}">
-    <div class="thumb">{% if p.thumbnail %}<img src="{{ p.thumbnail | relative_url }}" alt="">{% else %}[ 썸네일 ]{% endif %}</div>
-    <div class="pcard-body">
-      <div class="pcard-top"><span class="pcard-name">{{ p.name }}</span><span class="pcard-year">{{ p.year }}</span></div>
-      <p class="pcard-tagline">{{ p.tagline }}</p>
-      <p class="pcard-tech">{{ p.tech | join: " · " }}</p>
-    </div>
-  </a>
+  <li>
+    <a class="p-row" href="{{ p.url | relative_url }}">
+      <div class="p-row-thumb thumb">{% if p.thumbnail %}<img src="{{ p.thumbnail | relative_url }}" alt="">{% else %}[ 썸네일 ]{% endif %}</div>
+      <div class="p-row-body">
+        <div class="p-row-top"><span class="p-row-name">{{ p.name }}</span><span class="pcard-year">{{ p.year }}</span></div>
+        <p class="p-row-tagline">{{ p.tagline }}</p>
+        <p class="pcard-tech">{{ p.tech | join: " · " }}</p>
+      </div>
+    </a>
+  </li>
   {% endfor %}
-</div>
+</ul>
 
 {% if site.posts.size > 0 %}
 <div class="section-head">
